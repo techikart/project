@@ -1,0 +1,94 @@
+
+{% extends "base.html"%} {% load static %}
+{% block maincontent %}
+
+  <section class="bg-dark text-light">
+    <div class="container">
+        all our products are certified.
+    </div>
+  </section>
+
+  <div class="container shop-item">
+  <span class="shop-item-title"><h2>laptop</h2></span>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'techicart/images/laptop3.jpg' %}" class="d-block w-100 shop-item-image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'techicart/images/laptop3.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'techicart/images/laptop3.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="container shop-item-details">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam molestias aperiam facere 
+        et hic quae facilis deserunt commodi. Dignissimos temporibus 
+        incidunt asperiores tenetur, consequatur magni nostrum quaerat velit id quos?</p>
+      <h1>
+        <span class="shop-item-price"><mark>$12.99</mark></span></h1>
+    </div>
+    <!--buy button-->
+    <div class="container shop-item">
+        <div class="d-grid gap-2 mx-auto">
+          <a href="/buyer/" class="btn btn-success" type="button">BUY</a>
+         <!-- <a href="/cart/" class="btn btn-light shop-item-button" type="button">ADD TO CART</a>
+          <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+        </div>
+      -->   
+      </div>
+      <button class="btn btn-light btn-block shop-item-button" type="button">ADD TO CART</button>
+   
+</div>
+      
+  </div>
+
+
+{% comment %} <div class="shop-item">
+                    <span class="shop-item-title">Album 3</span>
+                    <img class="shop-item-image" src="Images/Album 3.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$9.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div> {% endcomment %}
+          
+
+<div class="container">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam molestias aperiam facere 
+    et hic quae facilis deserunt commodi. Dignissimos temporibus 
+    incidunt asperiores tenetur, consequatur magni nostrum quaerat velit id quos?</p>
+</div>
+ <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+
+
+    {% endblock maincontent %}
