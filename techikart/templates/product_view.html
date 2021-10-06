@@ -8,8 +8,8 @@
     </div>
   </section>
 
-  <div class="container shop-item">
-  <span class="shop-item-title"><h2>laptop</h2></span>
+  <div class="container shop-item product-under">
+  <span class="shop-item-title productName"><h2>laptop</h2></span>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -21,7 +21,7 @@
             <img src="{% static 'techicart/images/laptop3.jpg' %}" class="d-block w-100 shop-item-image" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="{% static 'techicart/images/laptop3.jpg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'techicart/images/laptop3.jpg' %}" class="d-block w-100 product-image" alt="...">
           </div>
           <div class="carousel-item">
             <img src="{% static 'techicart/images/laptop3.jpg' %}" class="d-block w-100" alt="...">
@@ -37,12 +37,12 @@
         </button>
       </div>
     </div>
-    <div class="container shop-item-details">
+    <div class="container shop-item-details product-summary">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam molestias aperiam facere 
         et hic quae facilis deserunt commodi. Dignissimos temporibus 
         incidunt asperiores tenetur, consequatur magni nostrum quaerat velit id quos?</p>
       <h1>
-        <span class="shop-item-price"><mark>$12.99</mark></span></h1>
+        <span class="shop-item-price priceValue"><mark>$12.99</mark></span></h1>
     </div>
     <!--buy button-->
     <div class="container shop-item">
@@ -51,9 +51,11 @@
          <!-- <a href="/cart/" class="btn btn-light shop-item-button" type="button">ADD TO CART</a>
           <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
         </div>
-      -->   
+      -->
+
+       
       </div>
-      <button class="btn btn-light btn-block shop-item-button" type="button">ADD TO CART</button>
+      <button class="btn btn-light btn-block shop-item-button addToCart" type="button">ADD TO CART</button>
    
 </div>
       
@@ -74,21 +76,9 @@
     et hic quae facilis deserunt commodi. Dignissimos temporibus 
     incidunt asperiores tenetur, consequatur magni nostrum quaerat velit id quos?</p>
 </div>
- <section class="container content-section">
-            <h2 class="section-header">CART</h2>
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-            </div>
-            <div class="cart-items">
-            </div>
-            <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0</span>
-            </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-        </section>
 
+
+
+    
 
     {% endblock maincontent %}

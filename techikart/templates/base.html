@@ -22,8 +22,11 @@
       href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
       rel="stylesheet"
     />
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+
+    <script src="{% static 'js/multislider.min.js' %}"></script>
     
-     <script src="{% static 'js/store.js' %}" defer></script>
+    <script src="{% static 'js/store.js' %}" defer></script>
      {% comment %} <script>
         if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
@@ -179,10 +182,13 @@ function updateCartTotal() {
             <a href="/about/" class="nav-link">ABOUT US</a>
             </li>
             <li class="nav-item">
-            <a href="/cart/" class="navbar-brand" href="#">
-    <img src="{% static 'techicart/images/2cart.png' %}" width="60" height="40" class="d-inline-block align-top" alt=""></a>
+            <a href="/cart/" d="menuButton" class="navbar-brand" 
+             data-bs-toggle="modal"
+              data-bs-target="#enroll">
+            <img src="{% static 'techicart/images/2cart.png' %}" width="50" height="40" class="d-inline-block align-top" alt=""></a>
             </li>
-            
+          
+             
 
           
           
@@ -199,6 +205,8 @@ function updateCartTotal() {
       
     </div>
   </nav>
+  
+  
   {% block maincontent %}
 
   {% endblock maincontent %}
@@ -215,6 +223,66 @@ function updateCartTotal() {
           </a>
         </div>
       </footer>
+
+      <!-- Modal -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="enrollLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollLabel">YOUR CART</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">all the products you have selected</p>
+            
+ <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <a href="/buyer/" class="btn btn-primary" type="button">PURCHASE</a>
+        </section>
+
+
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  
+
+          <script src="{% static 'js/shopping-cart.js' %}"></script>
+          <script src="{% static 'js/script.js' %}"></script>
 
 
 
@@ -278,17 +346,17 @@ function updateCartTotal() {
     </div>
   </div>
   
+  -->
   
-  
-    
   <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
   crossorigin="anonymous"
   ></script>
+    
   
   </body>
   </html>
   
   
-   -->
+   
